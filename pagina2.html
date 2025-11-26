@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 2</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            font-family: 'Poppins';
+            padding-top: 100px;
+        }
+
+        link {
+            font-size: 15px;
+            color: #000000;
+        }
+
+        a {
+            font-size: 20px;
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            height: 80px;
+            z-index: 10;
+            background-color: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+        }
+
+        h1 {
+            margin-top: 50px;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(0, 110, 255, 0.7), 0 0 20px rgba(0, 195, 255, 0.5);
+        }
+
+        .logotipo {
+            width: 200px;
+            height: auto;
+        }
+
+        .navbar {
+            background-color: transparent;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+        }
+
+        nav {
+            margin-right: 450px;
+        }
+
+        .nav-links {
+            list-style: none;
+        }
+
+        .nav-links li {
+            display: inline-block;
+            padding: 0px 5px;
+            margin-right: 20px;
+        }
+
+        .nav-links li a:hover {
+            color: #00c3ff;
+        }
+
+        nav a.ativo {
+            border-bottom: 2px solid #00c3ff;
+            padding-bottom: 2px;
+            color: #00c3ff;
+            transition: all 0.3s ease;
+        }
+
+        footer {
+            background-image: linear-gradient(to right, #15151548, #1919195e, #4141413f, #393939);
+            color: transparent;
+            padding: 30px 10%;
+            margin-top: 50px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .footer-esquerda.participantes p {
+            font-size: 18px;
+            margin: 5px 0;
+            text-align: left;
+            text-shadow: 0 0 10px rgba(0, 110, 255, 0.7), 0 0 20px rgba(0, 195, 255, 0.5);
+        }
+
+        .footer-centro-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 300px;
+            flex-grow: 1;
+        }
+
+        .logo-footer-principal {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            filter: drop-shadow(0 0 5px #00c3ff);
+        }
+
+        .footer-direita.universidade {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-direita.universidade img {
+            max-width: 270px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .footer-direita.universidade h2 {
+            font-size: 16px;
+            font-weight: 500;
+            margin: 0;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(0, 110, 255, 0.7), 0 0 20px rgba(0, 195, 255, 0.5);
+        }
+
+        .footer-bottom.copyright p {
+            font-size: 14px;
+            margin: 0;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(0, 110, 255, 0.7), 0 0 20px rgba(0, 195, 255, 0.5);
+        }
+
+        p {
+            color: #ffffff;
+            font-size: 25px;
+            line-height: 1.6;
+            margin: 20px 0;
+            text-align: justify;
+        }
+
+        .titulo-home-page {
+            font-size: 50px;
+            animation-name: zoom-animation;
+            animation-duration: 3s;
+            animation-iteration-count: initial;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(0, 110, 255, 0.7), 0 0 20px rgba(0, 195, 255, 0.5);
+        }
+
+        @keyframes zoom-animation {
+            from {
+                transform: scale(.1);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .container-par {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 50px;
+        }
+
+        .container-par img {
+            width: 600px;
+            margin: 0;
+            transition: transform 0.4s ease;
+            border-radius: 3%;
+        }
+
+        .container-par img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 15px rgba(0, 195, 255, 0.5);
+        }
+
+        .container1 {
+            flex-direction: row;
+        }
+
+        .container2 {
+            flex-direction: row-reverse;
+        }
+
+        .container3 {
+            flex-direction: row;
+        }
+
+        .container4 {
+            flex-direction: row-reverse;
+        }
+
+        .container1 p,
+        .container2 p,
+        .container3 p,
+        .container4 p {
+            flex: 1;
+            padding: 0 30px;
+        }
+
+        .container1,
+        .container2,
+        .container3,
+        .container4 {
+            margin-bottom: 150px;
+        }
+
+        @media (max-width: 1440px) {
+            header {
+                padding: 15px 10px;
+            }
+
+            nav {
+                margin-right: 280px;
+            }
+
+            a {
+                font-size: 18px;
+            }
+
+            .nav-links li {
+                margin-right: 15px;
+            }
+
+            .logotipo {
+                width: 150px;
+            }
+
+            .navbar {
+                padding: 5px;
+            }
+
+            p {
+            color: #ffffff;
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 20px 0;
+            text-align: justify;
+            }
+        }
+
+    </style>
+
+</head>
+
+</head>
+
+<body>
+
+    <header>
+
+        <a href="index.html"><img src="/img/logo1.png" alt="" class="logotipo"></a>
+
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="pagina1.html">Catálogo</a></li>
+                <li><a href="pagina2.html" class="ativo">Serviços e Clientes</a></li>
+                <li><a href="pagina3.html">Contato e Localização</a></li>
+                <li><a href="pagina4.html">Por que escolher o Zitão?</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <table width="100%" border="0">
+
+        <tr>
+            <td width="15%"></td>
+
+            <td width="70%">
+
+                <center>
+                    <h1 class="titulo-home-page">Alguns de Nossos Serviços</h1>
+                </center>
+
+                <div class="container1 container-par">
+
+                    <img src="/img/2.jpg" alt="">
+
+                    <p>
+                        ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+                        Este resultado ilustra o momento inicial da Lavagem Externa Premium. O veículo está sendo
+                        coberto por uma espuma densa, um processo minucioso que utiliza shampoos automotivos de alta
+                        qualidade com pH balanceado. Esta técnica é fundamental para remover totalmente sujeiras como
+                        poeira, lama, resíduos de chuva e poluição que se acumulam no dia a dia. Ao aplicar a espuma
+                        densa, garantimos que a sujeira seja amolecida e solta de forma eficiente e delicada, o que é
+                        crucial para preservar a pintura e o verniz original do carro, evitando qualquer microabrasão. A
+                        lavagem é feita com esponjas especiais e luvas de microfibra, garantindo que a pintura seja
+                        tratada com o máximo de cuidado antes de receber a secagem com toalhas apropriadas para um
+                        acabamento impecável.
+                    </p>
+
+                </div>
+
+                <div class="container2 container-par">
+
+                    <img src="img/3.jpg" alt="">
+
+                    <p>
+                        ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+                        ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+                        ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+                        Esta imagem, mostrando o GWM Haval H6, destaca o resultado do Acabamento Profissional e Proteção
+                        Final. Após a limpeza completa, o foco se volta para os detalhes externos, onde são aplicados
+                        produtos que renovam e protegem os plásticos, borrachas e demais detalhes. O pneu estepe e as
+                        peças plásticas escuras recebem um tratamento que devolve o aspecto original sem deixá-los
+                        ressecados. Além da estética renovada, este serviço garante a durabilidade das peças e oferece
+                        praticidade na manutenção futura do veículo. O objetivo é que o carro fique protegido, bonito e
+                        com aparência de recém-detalhado por dias e semanas, valorizando o veículo como um todo.
+                    </p>
+
+                </div>
+
+                <div class="container3 container-par">
+
+                    <img src="img/4.jpg" alt="">
+
+                    <p>
+                        ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+                        ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+                        ㅤㅤㅤㅤㅤㅤㅤ
+                        O brilho intenso e o reflexo limpo do Jaguar XE preto são o resultado da Descontaminação e
+                        Revitalização de Pintura. Com o tempo, a pintura acumula contaminantes invisíveis, como resíduos
+                        metálicos e poeira industrial. A descontaminação é o processo técnico que remove essas
+                        impurezas, deixando a superfície lisa e sedosa novamente. Em seguida, a revitalização, realizada
+                        com politriz e compostos específicos, devolve o brilho original ao carro. Este trabalho
+                        especializado reduz micro-riscos, ameniza marcas superficiais e corrige a aparência opaca da
+                        lataria, garantindo um brilho profundo e um reflexo limpo, o que aumenta o valor estético e
+                        comercial do veículo.
+                    </p>
+
+                </div>
+
+                <div class="container4 container-par">
+
+                    <img src="img/5.jpg" alt="">
+
+                    <p>
+                        ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+                        ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+                        O acabamento espelhado e o aspecto de carro novo do Audi Q3 são resultado da combinação da
+                        Lavagem Externa Premium com o Acabamento Profissional e Proteção Final. Após a limpeza
+                        minuciosa, a pintura recebe a aplicação de ceras líquidas ou selantes especiais. Estes produtos
+                        criam uma camada protetora invisível que aumenta a resistência da lataria contra sujeira, riscos
+                        leves e intempéries. O acabamento não apenas deixa a superfície do carro com reflexos intensos e
+                        mais brilhante, mas também facilita futuras lavagens, pois a sujeira tem menos aderência. Este é
+                        um serviço que oferece durabilidade e estética, mantendo seu veículo com o melhor visual por
+                        mais tempo.
+                    </p>
+
+                </div>
+
+            </td>
+
+            <td width="15%"></td>
+        </tr>
+
+    </table>
+
+    <footer>
+        <div class="footer-content">
+
+            <div class="footer-esquerda participantes">
+                <p>Paulo Vitor Macedo Alves</p>
+                <p>Paulo Henrique Cabral Martins</p>
+            </div>
+
+            <div class="footer-centro-logo">
+                <img src="/img/lavajatozitao-removebg-preview.png" alt="" class="logo-footer-principal">
+            </div>
+
+            <div class="footer-direita universidade">
+                <img src="/img/logo ucb.png" alt="Logo da Universidade Católica de Brasília">
+                <h2>Universidade Católica de Brasília</h2>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom copyright">
+            <p>&copy;2025 Lava Jato Zitão. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

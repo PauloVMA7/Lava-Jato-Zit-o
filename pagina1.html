@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 1</title>
+
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            font-family: 'Poppins';
+            padding-top: 100px;
+        }
+
+        link {
+            font-size: 15px;
+            color: #000000;
+        }
+
+        a {
+            font-size: 20px;
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            height: 80px;
+            z-index: 10;
+            background-color: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+        }
+
+        h1 {
+            margin-top: 50px;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(0, 110, 255, 0.7), 0 0 20px rgba(0, 195, 255, 0.5);
+        }
+
+        .logotipo {
+            width: 200px;
+            height: auto;
+        }
+
+        .navbar {
+            background-color: transparent;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+        }
+
+        nav {
+            margin-right: 450px;
+        }
+
+        .nav-links {
+            list-style: none;
+        }
+
+        .nav-links li {
+            display: inline-block;
+            padding: 0px 5px;
+            margin-right: 20px;
+        }
+
+        .nav-links li a:hover {
+            color: #00c3ff;
+        }
+
+        nav a.ativo {
+            border-bottom: 2px solid #00c3ff;
+            padding-bottom: 2px;
+            color: #00c3ff;
+            transition: all 0.3s ease;
+        }
+
+        footer {
+            background-image: linear-gradient(to right, #15151548, #1919195e, #4141413f, #393939);
+            color: transparent;
+            padding: 30px 10%;
+            margin-top: 50px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .footer-esquerda.participantes p {
+            font-size: 18px;
+            margin: 5px 0;
+            text-align: left;
+            text-shadow: 0 0 10px rgba(0, 110, 255, 0.7), 0 0 20px rgba(0, 195, 255, 0.5);
+        }
+
+        .footer-centro-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 300px;
+            flex-grow: 1;
+        }
+
+        .logo-footer-principal {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            filter: drop-shadow(0 0 5px #00c3ff);
+        }
+
+        .footer-direita.universidade {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-direita.universidade img {
+            max-width: 270px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .footer-direita.universidade h2 {
+            font-size: 16px;
+            font-weight: 500;
+            margin: 0;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(0, 110, 255, 0.7), 0 0 20px rgba(0, 195, 255, 0.5);
+        }
+
+        .footer-bottom.copyright p {
+            font-size: 14px;
+            margin: 0;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(0, 110, 255, 0.7), 0 0 20px rgba(0, 195, 255, 0.5);
+        }
+
+        .img-page-1 {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            height: 700px;
+            border-radius: 3%;
+            margin-top: 30px;
+            transition: transform 0.4s ease;
+        }
+
+        .img-page-1:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 15px rgba(0, 195, 255, 0.5);
+        }
+
+        p {
+            color: #ffffff;
+            font-size: 20px;
+            line-height: 1.6;
+            margin: 20px 0;
+            text-align: justify;
+        }
+
+        .titulo-home-page {
+            font-size: 50px;
+            animation-name: zoom-animation;
+            animation-duration: 3s;
+            animation-iteration-count: initial;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(0, 110, 255, 0.7), 0 0 20px rgba(0, 195, 255, 0.5);
+        }
+
+        @keyframes zoom-animation {
+            from {
+                transform: scale(.1);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 1440px) {
+            header {
+                padding: 15px 10px;
+            }
+
+            nav {
+                margin-right: 280px;
+            }
+
+            a {
+                font-size: 18px;
+            }
+
+            .nav-links li {
+                margin-right: 15px;
+            }
+
+            .logotipo {
+                width: 150px;
+            }
+
+            .navbar {
+                padding: 5px;
+            }
+        }
+
+    </style>
+
+</head>
+
+</head>
+
+<body>
+
+    <header>
+
+        <a href="index.html"><img src="/img/logo1.png" alt="" class="logotipo"></a>
+        
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="pagina1.html" class="ativo">Catálogo</a></li>
+                <li><a href="pagina2.html">Serviços e Clientes</a></li>
+                <li><a href="pagina3.html">Contato e Localização</a></li>
+                <li><a href="pagina4.html">Por que escolher o Zitão?</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <table width="100%" border="0">
+        
+        <tr>
+            <td width="15%"></td>
+
+            <td width="70%">
+
+               <center><h1 class="titulo-home-page">Conheça Nosso Catálogo</h1></center> 
+
+                <img src="/img/a2.png" alt="" class="img-page-1">
+
+                <p><h1>Lavagem Externa Premium</h1></p>
+                
+                <p>A lavagem externa premium é um processo minucioso e altamente cuidadoso, pensado para quem deseja ver
+                    o veículo com brilho intenso e aparência renovada. Utilizando produtos de alta qualidade e técnica
+                    especializada, esse serviço remove totalmente sujeiras como poeira, lama, resíduos de chuva,
+                    poluição, manchas ocasionais e partículas acumuladas no dia a dia.
+
+                    Durante o processo, esponjas especiais, luvas de microfibra e shampoos automotivos com pH balanceado
+                    são aplicados para preservar a pintura e o verniz original do carro. A remoção de sujeira é feita de
+                    forma delicada e eficiente, garantindo que nenhuma microabrasão seja causada. No final, o veículo
+                    recebe uma secagem cuidadosa, feita apenas com toalhas apropriadas para evitar marcas, garantindo um
+                    acabamento impecável.
+                </p>
+
+                <p><h1>Lavagem Interna Completa</h1></p>
+                
+                <p>A lavagem interna completa é um processo profundo de restauração do ambiente interno do veículo.
+                    Aqui, cada detalhe é considerado: painéis, portas, cantos, console central, porta-objetos, forros,
+                    carpete e estofados recebem atenção máxima.
+
+                    Primeiro, é realizada uma aspiração detalhada, removendo poeira, resíduos, pequenos detritos e
+                    partículas acumuladas em áreas de difícil acesso. Em seguida, os plásticos e superfícies rígidas são
+                    tratados com produtos adequados que limpam sem engordurar, deixando um acabamento acetinado,
+                    agradável ao toque e sem odor forte.
+                </p>
+                
+                <p><h1>Higienização Profunda</h1></p>
+                
+                <p>A higienização profunda vai além da simples limpeza. Ela é voltada para eliminar sujeiras invisíveis,
+                    ácaros, fungos, bactérias e odores indesejáveis que se acumulam com o tempo nos tecidos do carro.
+
+                    O processo utiliza máquinas extratoras profissionais e produtos bactericidas que penetram
+                    profundamente nas fibras dos bancos, carpetes e forrações. A sujeira dissolve e é removida de dentro
+                    para fora, garantindo um resultado superior ao da limpeza comum.
+                </p>
+
+                <p><h1>Descontaminação e Revitalização de Pintura</h1></p>
+                
+                <p>Com o tempo, a pintura do carro acumula contaminantes invisíveis, como resíduos metálicos, poeira
+                    industrial, seiva de árvores, partículas de asfalto e poluentes. A descontaminação é um processo
+                    técnico que remove essas impurezas, deixando a superfície lisa novamente.
+
+                    Após essa etapa, inicia-se a revitalização: um trabalho especializado que devolve o brilho original
+                    ao carro, reduz micro-riscos, ameniza marcas superficiais e corrige a aparência opaca da lataria. A
+                    revitalização é realizada com politriz, compostos específicos e técnicas que valorizam o verniz,
+                    devolvendo o aspecto de carro novo.
+
+                    O resultado é surpreendente: um brilho profundo, reflexo limpo e superfície com toque sedoso, livre
+                    de contaminações. É um serviço ideal para quem deseja aumentar o valor estético e comercial do
+                    veículo.
+                </p>
+                
+                <p><h1>Cuidado Especial para Bancos e Estofados</h1></p>
+                
+                <p>Os bancos e estofados são uma das partes do carro que mais sofrem com o uso diário: derramamentos,
+                    poeira, suor, atrito, umidade e manchas de diferentes tipos. O cuidado especial para estofados é um
+                    processo detalhado que foca tanto na limpeza quanto na preservação.
+
+                    Para bancos de tecido, é aplicada uma limpeza profunda que remove sujeiras impregnadas, revitaliza
+                    as cores e elimina odores. Para bancos de couro, são utilizados produtos específicos que limpam,
+                    hidratam e nutrem o material, evitando rachaduras e desgaste precoce.
+
+                    O grande diferencial é que cada tipo de estofado recebe um tratamento exclusivo, apropriado e
+                    seguro. O fim do processo entrega bancos mais macios, limpos, perfumados e confortáveis.
+                </p>
+                
+                <p><h1>Acabamento Profissional e Proteção Final</h1></p>
+                
+                <p>Após todo o cuidado e limpeza, o acabamento profissional é a etapa que garante que o veículo
+                    permaneça bonito por muito mais tempo. Aqui são aplicadas ceras líquidas, pastosas ou selantes
+                    especiais que criam uma camada invisível sobre a pintura, aumentando a resistência contra sujeira,
+                    riscos leves e efeitos do clima.
+
+                    O acabamento deixa a superfície do carro ainda mais brilhante, com reflexos intensos, além de
+                    facilitar futuras lavagens. Nos plásticos, borrachas e detalhes externos, são usados produtos que
+                    renovam e protegem, devolvendo o aspecto original sem deixá-los ressecados.
+
+                    O objetivo final é praticidade, durabilidade e estética. O carro fica protegido, bonito e com
+                    aparência de recém-detalhado por dias e até semanas, dependendo da manutenção.
+                </p>
+
+            </td>
+
+            <td width="15%"></td>
+            
+        </tr>
+
+    </table>
+
+    <footer>
+        <div class="footer-content">
+
+            <div class="footer-esquerda participantes">
+                <p>Paulo Vitor Macedo Alves</p>
+                <p>Paulo Henrique Cabral Martins</p>
+            </div>
+
+            <div class="footer-centro-logo">
+                <img src="/img/lavajatozitao-removebg-preview.png" alt="" class="logo-footer-principal">
+            </div>
+
+            <div class="footer-direita universidade">
+                <img src="/img/logo ucb.png" alt="Logo da Universidade Católica de Brasília">
+                <h2>Universidade Católica de Brasília</h2>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom copyright">
+            <p>&copy;2025 Lava Jato Zitão. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

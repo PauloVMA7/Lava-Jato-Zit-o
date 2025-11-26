@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            font-family: 'Poppins';
+            padding-top: 100px;
+        }
+
+        link {
+            font-size: 15px;
+            color: #000000;
+        }
+
+        a {
+            font-size: 20px;
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            height: 80px;
+            z-index: 10;
+            background-color: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+        }
+
+        h1 {
+            margin-top: 50px;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(0, 110, 255, 0.7), 0 0 20px rgba(0, 195, 255, 0.5);
+        }
+
+        .logotipo {
+            width: 200px;
+            height: auto;
+        }
+
+        .navbar {
+            background-color: transparent;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+        }
+
+        nav {
+            margin-right: 550px;
+        }
+
+        .nav-links {
+            list-style: none;
+        }
+
+        .nav-links li {
+            display: inline-block;
+            padding: 0px 5px;
+            margin-right: 20px;
+        }
+
+        .nav-links li a:hover {
+            color: #00c3ff;
+        }
+
+        footer {
+            background-image: linear-gradient(to right, #15151548, #1919195e, #4141413f, #393939);
+            color: transparent;
+            padding: 30px 10%;
+            margin-top: 50px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .footer-esquerda.participantes p {
+            font-size: 18px;
+            margin: 5px 0;
+            text-align: left;
+            text-shadow: 0 0 10px rgba(0, 110, 255, 0.7), 0 0 20px rgba(0, 195, 255, 0.5);
+        }
+
+        .footer-centro-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 300px;
+            flex-grow: 1;
+        }
+
+        .logo-footer-principal {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            filter: drop-shadow(0 0 5px #00c3ff);
+        }
+
+        .footer-direita.universidade {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-direita.universidade img {
+            max-width: 270px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .footer-direita.universidade h2 {
+            font-size: 16px;
+            font-weight: 500;
+            margin: 0;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(0, 110, 255, 0.7), 0 0 20px rgba(0, 195, 255, 0.5);
+        }
+
+        .footer-bottom.copyright p {
+            font-size: 14px;
+            margin: 0;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(0, 110, 255, 0.7), 0 0 20px rgba(0, 195, 255, 0.5);
+        }
+
+        .img-home-page {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            height: 700px;
+            border-radius: 3%;
+            margin-top: 30px;
+            transition: transform 0.4s ease;
+        }
+
+        .img-home-page:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 15px rgba(0, 195, 255, 0.5);
+        }
+
+        p {
+            color: #ffffff;
+            font-size: 20px;
+            line-height: 1.6;
+            margin: 20px 0;
+            text-align: justify;
+        }
+
+        .titulo-home-page {
+            font-size: 50px;
+            animation-name: zoom-animation;
+            animation-duration: 3s;
+            animation-iteration-count: initial;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(0, 110, 255, 0.7), 0 0 20px rgba(0, 195, 255, 0.5);
+        }
+
+        @keyframes zoom-animation {
+            from {
+                transform: scale(.1);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 1440px) {
+            header {
+                padding: 15px 10px;
+            }
+
+            nav {
+                margin-right: 280px;
+            }
+
+            a {
+                font-size: 18px;
+            }
+
+            .nav-links li {
+                margin-right: 15px;
+            }
+
+            .logotipo {
+                width: 150px;
+            }
+
+            .navbar {
+                padding: 5px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <a href="index.html"><img src="/img/logo1.png" alt="" class="logotipo"></a>
+
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="pagina1.html">Catálogo</a></li>
+                <li><a href="pagina2.html">Serviços e Clientes</a></li>
+                <li><a href="pagina3.html">Contato e Localização</a></li>
+                <li><a href="pagina4.html">Por que escolher o Zitão?</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <table width="100%" border="0">
+
+        <tr>
+
+            <td width="15%"></td>
+
+            <td width="70%">
+
+                <center>
+                    <h1 class="titulo-home-page">Lava Jato Zitão - O Melhor de Brasília</h1>
+                </center>
+
+
+                <img src="/img/a1.png" alt="" class="img-home-page">
+
+                <h1>SOBRE NÓS</h1>
+
+                <p>
+                    Hoje em dia, tempo e qualidade são super importantes, e o Lava Jato Zitão manda bem como um dos
+                    melhores serviços automotivos da área. Ele não é só um lava jato, virou um lugar de cuidar e dar
+                    valor ao seu carro, fazendo da manutenção algo confiável, preciso e com ótimos resultados.
+
+                    O Zitão começou com a ideia de juntar tecnologia, profissionais top e um bom atendimento, e ganhou
+                    clientes fiéis porque faz tudo muito bem e é sempre honesto. Eles cuidam de cada carro como se fosse
+                    a coisa mais importante e entregam ele impecável, mostrando a qualidade do serviço.
+                </p>
+
+                <p>
+                    Na No Zitão, a gente faz cada limpeza com o maior cuidado, usando os melhores produtos que existem.
+                    Desde a lavagem básica até aquela estética completa, tudo é feito com o que há de mais moderno e com
+                    muita atenção a cada cantinho. Afinal, um brilho de verdade não surge do nada.
+
+                    O que a gente faz por lá:
+                    <br><br>
+                    • Lavagem externa top, com produtos que não estragam a pintura.
+                    <br><br>
+                    • Limpeza interna completa, pra deixar o carro cheiroso e com cara de novo.
+                    <br><br>
+                    • Higienização dos bancos, pra quem quer conforto e um carro saudável.
+                    <br><br>
+                    • Revitalização da pintura, tirando sujeiras e marcas pra parecer que saiu da loja.
+                    <br><br>
+                    • Proteção com ceras especiais, que fazem o brilho durar mais e ainda protegem contra água e
+                    sujeira.
+
+                    Cada serviço é feito pra limpar, mas também pra cuidar, dar um trato e deixar seu carro valendo
+                    mais.
+                </p>
+
+                <p>
+                    O que faz o Zitão ser diferente é juntar gente boa com amor pelo trabalho. O pessoal aqui sempre
+                    aprende coisas novas pra usar as melhores e mais seguras técnicas, e eles sempre prestam atenção no
+                    que cada carro precisa.
+
+                    E mais, a gente fala direto com você, numa boa e sem esconder nada. Te explicamos tudo o que vamos
+                    fazer, sem pegadinhas, sem te oferecer o que não precisa e sempre pensando em achar a melhor
+                    solução.
+                </p>
+
+                <p>
+                    No Lava Jato Zitão, a gente junta jeito profissional, capricho e paixão por carro. Quem traz o carro
+                    aqui uma vez, sempre volta, pode apostar!
+
+                    Se você quer dar um trato geral no seu carro, daquele jeito que faz ele brilhar por dentro e por
+                    fora, o Zitão é o lugar certo.
+                </p>
+
+
+            </td>
+
+            <td width="15%"></td>
+        </tr>
+
+    </table>
+
+    <footer>
+        <div class="footer-content">
+
+            <div class="footer-esquerda participantes">
+                <p>Paulo Vitor Macedo Alves</p>
+                <p>Paulo Henrique Cabral Martins</p>
+            </div>
+
+            <div class="footer-centro-logo">
+                <img src="/img/lavajatozitao-removebg-preview.png" alt="" class="logo-footer-principal">
+            </div>
+
+            <div class="footer-direita universidade">
+                <img src="/img/logo ucb.png" alt="Logo da Universidade Católica de Brasília">
+                <h2>Universidade Católica de Brasília</h2>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom copyright">
+            <p>&copy;2025 Lava Jato Zitão. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
